@@ -54,6 +54,7 @@ Plugin 'https://github.com/majutsushi/tagbar.git'
 Plugin 'https://github.com/kien/rainbow_parentheses.vim.git'
 Plugin 'https://github.com/vim-scripts/taglist.vim.git'
 Plugin 'git@github.com:davidhalter/jedi-vim.git'
+Plugin 'mattn/emmet-vim'
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
