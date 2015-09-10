@@ -16,7 +16,7 @@ set mouse=a
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
 "call vundle#rc(path)
@@ -55,7 +55,9 @@ Plugin 'https://github.com/kien/rainbow_parentheses.vim.git'
 Plugin 'https://github.com/vim-scripts/taglist.vim.git'
 Plugin 'git@github.com:davidhalter/jedi-vim.git'
 Plugin 'mattn/emmet-vim'
+Plugin 'https://github.com/tpope/vim-surround.git'
 
+call vundle#end()
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
