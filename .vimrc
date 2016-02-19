@@ -50,6 +50,7 @@ Plugin 'https://github.com/bronson/vim-trailing-whitespace.git'
 Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/hdima/python-syntax.git'
 Plugin 'https://github.com/kevinw/pyflakes-vim.git'
+Plugin 'https://github.com/nvie/vim-flake8.git'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 Plugin 'https://github.com/kien/rainbow_parentheses.vim.git'
 Plugin 'https://github.com/vim-scripts/taglist.vim.git'
@@ -72,7 +73,7 @@ filetype plugin indent on     " required
 " NOTE: comments after Plugin commands are not allowed.
 " Put your stuff after this line
 let mapleader = ','
-nnoremap <silent> <F7> :NERDTreeToggle<cr>
+nnoremap <silent> <F5> :NERDTreeToggle<cr>
 
 "vim-powerline
 set encoding=utf-8
