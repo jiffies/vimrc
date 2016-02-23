@@ -17,3 +17,4 @@ $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 - taglist F9
 - jedi-vim ,g ,d 查找定义
 - vim-flake8 F7进行pep8检查
+- Conque F2打开shell,例如bash

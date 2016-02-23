@@ -47,7 +47,7 @@ Plugin 'git://github.com/altercation/vim-colors-solarized.git'
 Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/Raimondi/delimitMate.git'
 Plugin 'https://github.com/scrooloose/nerdcommenter.git'
-Plugin 'https://github.com/bronson/vim-trailing-whitespace.git'
+"Plugin 'https://github.com/bronson/vim-trailing-whitespace.git'
 Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/hdima/python-syntax.git'
 Plugin 'https://github.com/kevinw/pyflakes-vim.git'
@@ -58,6 +58,7 @@ Plugin 'https://github.com/vim-scripts/taglist.vim.git'
 Plugin 'git@github.com:davidhalter/jedi-vim.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'https://github.com/tpope/vim-surround.git'
+Plugin 'https://github.com/oplatek/Conque-Shell.git'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -104,3 +105,5 @@ let g:flake8_show_quickfix=0
 let g:flake8_show_in_file=1
 autocmd BufWritePost *.py call Flake8()
 :set colorcolumn=80
+"console conque
+nnoremap <silent> <F2> :ConqueTermSplit bash<CR>
