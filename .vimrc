@@ -7,6 +7,7 @@ filetype off                  " required
 set ts=4
 set expandtab
 set softtabstop=4
+set textwidth=79
 set shiftwidth=4
 set nu
 set ai
@@ -99,3 +100,7 @@ au Syntax * RainbowParenthesesLoadBraces
 "taglist
 nnoremap <silent> <F8> :Tlist<CR>
 nnoremap <silent> <F4> :tabnew<CR>
+let g:flake8_show_quickfix=0
+let g:flake8_show_in_file=1
+autocmd BufWritePost *.py call Flake8()
+:set colorcolumn=80

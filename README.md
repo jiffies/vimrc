@@ -16,3 +16,4 @@ $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 - tagbar F8
 - taglist F9
 - jedi-vim ,g ,d 查找定义
+- vim-flake8 F7进行pep8检查
