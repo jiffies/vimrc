@@ -59,6 +59,9 @@ Plugin 'git@github.com:davidhalter/jedi-vim.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'https://github.com/oplatek/Conque-Shell.git'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'mhinz/vim-startify'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -99,11 +102,12 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 "taglist
-nnoremap <silent> <F8> :Tlist<CR>
+"nnoremap <silent> <F8> :Tlist<CR>
 nnoremap <silent> <F4> :tabnew<CR>
-let g:flake8_show_quickfix=0
 let g:flake8_show_in_file=1
-autocmd BufWritePost *.py call Flake8()
+let g:flake8_show_in_gutter=1
+autocmd BufRead,BufWritePost *.py call Flake8()
 :set colorcolumn=80
 "console conque
 nnoremap <silent> <F2> :ConqueTermSplit bash<CR>
+autocmd FileType python map <buffer> <F8> :!yapf -i % --style=pep8;isort %;<CR><CR>
