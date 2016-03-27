@@ -7,7 +7,7 @@ filetype off                  " required
 set ts=4
 set expandtab
 set softtabstop=4
-set textwidth=79
+"set textwidth=79
 set shiftwidth=4
 set nu
 set ai
@@ -50,7 +50,7 @@ Plugin 'https://github.com/scrooloose/nerdcommenter.git'
 "Plugin 'https://github.com/bronson/vim-trailing-whitespace.git'
 Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/hdima/python-syntax.git'
-Plugin 'https://github.com/kevinw/pyflakes-vim.git'
+"Plugin 'https://github.com/kevinw/pyflakes-vim.git'
 Plugin 'https://github.com/nvie/vim-flake8.git'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 Plugin 'https://github.com/kien/rainbow_parentheses.vim.git'
@@ -104,10 +104,11 @@ au Syntax * RainbowParenthesesLoadBraces
 "taglist
 "nnoremap <silent> <F8> :Tlist<CR>
 nnoremap <silent> <F4> :tabnew<CR>
-let g:flake8_show_in_file=1
-let g:flake8_show_in_gutter=1
-autocmd BufRead,BufWritePost *.py call Flake8()
-:set colorcolumn=80
+"let g:flake8_show_in_file=1
+"let g:flake8_show_in_gutter=0
+"nnoremap <silent> <F8> :call Flake8()<CR>
+"autocmd BufWritePost *.py call Flake8()
+:set colorcolumn=81
 "console conque
-nnoremap <silent> <F2> :ConqueTermSplit bash<CR>
-autocmd FileType python map <buffer> <F8> :!yapf -i % --style=pep8;isort %;<CR><CR>
+"nnoremap <silent> <F2> :ConqueTermSplit bash<CR>
+"autocmd FileType python map <buffer> <F8> :!yapf -i % --style=pep8;isort %;<CR><CR>
