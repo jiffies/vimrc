@@ -64,6 +64,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'https://github.com/xolox/vim-misc.git'
 Plugin 'https://github.com/xolox/vim-session.git'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -106,11 +107,14 @@ au Syntax * RainbowParenthesesLoadBraces
 "taglist
 "nnoremap <silent> <F8> :Tlist<CR>
 nnoremap <silent> <F4> :tabnew<CR>
-"let g:flake8_show_in_file=1
-"let g:flake8_show_in_gutter=0
+let g:flake8_show_in_file=1
+let g:flake8_show_in_gutter=1
 "nnoremap <silent> <F8> :call Flake8()<CR>
-"autocmd BufWritePost *.py call Flake8()
+autocmd BufWritePost *.py call Flake8()
 :set colorcolumn=80
 "console conque
 "nnoremap <silent> <F2> :ConqueTermSplit bash<CR>
 "autocmd FileType python map <buffer> <F8> :!yapf -i % --style=pep8;isort %;<CR><CR>
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
