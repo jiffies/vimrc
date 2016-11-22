@@ -118,3 +118,4 @@ autocmd BufWritePost *.py call Flake8()
 let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>s :Ack!<Space>'<cword>'<cr>
