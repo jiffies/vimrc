@@ -13,15 +13,18 @@ set nu
 set ai
 set si
 set mouse=a
-"python
+:set cursorline
+" copy to wsl
+vmap ;y :w !clip.exe<cr><cr>
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "let path = '~/some/path/here'
-"call vundle#rc(path)
 
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
@@ -43,7 +46,7 @@ Plugin 'https://github.com/Lokaltog/vim-powerline.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " ...
-Plugin 'git://github.com/altercation/vim-colors-solarized.git'
+Plugin 'https://github.com/altercation/vim-colors-solarized.git'
 Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/Raimondi/delimitMate.git'
 Plugin 'https://github.com/scrooloose/nerdcommenter.git'
@@ -55,7 +58,7 @@ Plugin 'https://github.com/nvie/vim-flake8.git'
 Plugin 'https://github.com/majutsushi/tagbar.git'
 Plugin 'https://github.com/kien/rainbow_parentheses.vim.git'
 Plugin 'https://github.com/vim-scripts/taglist.vim.git'
-Plugin 'git@github.com:davidhalter/jedi-vim.git'
+Plugin 'https://github.com/davidhalter/jedi-vim.git'
 Plugin 'mattn/emmet-vim'
 Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'https://github.com/oplatek/Conque-Shell.git'
@@ -119,3 +122,4 @@ let g:ackprg = 'ag --vimgrep --smart-case'
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 nnoremap <Leader>s :Ack!<Space>'<cword>'<cr>
+
