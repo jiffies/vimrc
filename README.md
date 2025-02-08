@@ -10,13 +10,13 @@
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-安装依赖
+2. 安装依赖
 
 ```
 sudo pip install isort jedi yapf flake8 virtualenvwrapper
 ```
 
-需要先安装vundle插件管理器，然后在vim中 `:PluginInstall` 命令
+3. 需要先安装vundle插件管理器，然后在vim中 `:PluginInstall` 命令
 
 ## 插件使用指南
 
